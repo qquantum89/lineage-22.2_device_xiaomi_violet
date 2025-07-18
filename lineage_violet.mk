@@ -11,8 +11,11 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common MistOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#MIUI Camera
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+
 # MistOs Flags
-MIST_BUILD_TYPE := OFFICIAL
+MIST_BUILD_TYPE := UNOFFICIAL
 MISTOS_MAINTAINER := CHRONIX 魚
 TARGET_ENABLE_BLUR := false
 PRODUCT_NO_CAMERA := true
