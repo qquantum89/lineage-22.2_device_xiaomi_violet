@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2018-2020 The LineageOS Project
 # Copyright (C) 2020 The PixelExperience Project
@@ -8,17 +9,20 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common EvoX stuff.
+# Inherit some common MistOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-#EvoX Flags
-EVO_BUILD_TYPE := Unofficial
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BUILD_APERTURE_CAMERA := false
-BYPASS_CHARGE_SUPPORTED  := true
+#MIUI Camera
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
-#Include ViperFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+# MistOs Flags
+MIST_BUILD_TYPE := UNOFFICIAL
+MISTOS_MAINTAINER := CHRONIX 魚
+TARGET_ENABLE_BLUR := false
+PRODUCT_NO_CAMERA := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
 
 #GAPPS
 WITH_GMS := true
