@@ -11,14 +11,12 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common EvoX stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-#EvoX Flags
-EVO_BUILD_TYPE := Unofficial
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BUILD_APERTURE_CAMERA := false
-BYPASS_CHARGE_SUPPORTED  := true
+#MIUI Camera
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
-#Include ViperFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+#Some Flags
+PRODUCT_NO_CAMERA := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
 #GAPPS
 WITH_GMS := true
@@ -32,3 +30,9 @@ PRODUCT_MODEL := Redmi Note 7 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+#RisingFlags
+PRODUCT_BUILD_PROP_OVERRIDES += \
+     RisingMaintainer="CHRONIX魚" \
+     RisingChipset="Snapdragon 675"
+
