@@ -11,14 +11,15 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common EvoX stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+
 #EvoX Flags
 EVO_BUILD_TYPE := Unofficial
+EVO_MAINTAINER := Chronix魚
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BUILD_APERTURE_CAMERA := false
 BYPASS_CHARGE_SUPPORTED  := true
-
-#Include ViperFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 #GAPPS
 WITH_GMS := true
