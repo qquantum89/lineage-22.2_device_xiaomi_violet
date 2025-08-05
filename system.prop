@@ -1,0 +1,13 @@
+# Add these as PRODUCT_SYSTEM_PROPERTIES (or in system.prop file), You may use utilities as libinit if configuring for unified devices
+ro.product.marketname
+ro.infinity.soc
+ro.infinity.battery
+ro.infinity.display
+ro.infinity.camera
+
+# Example Defintions
+ro.product.marketname=Redmi Note 7 Pro
+ro.infinity.soc=Snapdragon 675
+ro.infinity.battery=4000 mAh
+ro.infinity.display=2340 x 1080, 60 Hz
+ro.infinity.camera=48MP + 8MP / 13MP
