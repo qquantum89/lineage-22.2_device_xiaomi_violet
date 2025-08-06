@@ -4,8 +4,8 @@ persist.vendor.camera                           u:object_r:vendor_camera_prop:s0
 vendor.camera.boot_complete                     u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.                           u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                               u:object_r:vendor_camera_prop:s0
-ro.vendor.camera.res.fmq.size                   u:object_r:vendor_camera_prop:s0
-ro.vendor.camera.req.fmq.size                   u:object_r:vendor_camera_prop:s0
+# ro.vendor.camera.res.fmq.size                   u:object_r:vendor_camera_prop:s0
+# ro.vendor.camera.req.fmq.size                   u:object_r:vendor_camera_prop:s0
 
 # Dirac
 persist.audio.dirac.                u:object_r:dirac_prop:s0
