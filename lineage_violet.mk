@@ -24,7 +24,7 @@ TARGET_SUPPORTS_CALL_RECORDING := true
 # TARGET_HAS_UDFPS := false
 
 # RisingOs Specific 
-Add the following variables:
+# Add the following variables:
 
 # Lunch banner maintainer variable
 RISING_MAINTAINER="Anirban"
