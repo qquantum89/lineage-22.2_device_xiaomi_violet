@@ -7,6 +7,9 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
+# Adding Miui Cam 
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+
 # Inherit some common infinityFest AOSP stuff.
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -17,7 +20,7 @@ TARGET_SUPPORTS_CALL_RECORDING := true
 
 # Infinity-X Flags
 INFINITY_BUILD_TYPE := UnOfficial
-INFINITY_MAINTAINER := Anirban
+INFINITY_MAINTAINER := AnirbanX
 TARGET_SUPPORTS_BLUR := false
 TARGET_HAS_UDFPS := false
 WITH_GAPPS := true
