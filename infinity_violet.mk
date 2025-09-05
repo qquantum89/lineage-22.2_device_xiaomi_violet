@@ -22,7 +22,7 @@ TARGET_SUPPORTS_BLUR := false
 TARGET_HAS_UDFPS := false
 WITH_GAPPS := true
 WITH_GMS := true
-TARGET_ENABLE_BLUR := false
+TARGET_ENABLE_BLUR := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
