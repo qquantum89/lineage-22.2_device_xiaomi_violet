@@ -11,21 +11,29 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
 # Inherit some common infinityFest AOSP stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_CALL_RECORDING := true
 
-# Infinity-X Flags
+# CherishOs Flags
 INFINITY_BUILD_TYPE := UnOfficial
 INFINITY_MAINTAINER := Anirban_X
-TARGET_SUPPORTS_BLUR := false
+TARGET_SUPPORTS_BLUR := true
 TARGET_HAS_UDFPS := false
 WITH_GAPPS := true
 WITH_GMS := true
-TARGET_ENABLE_BLUR := false
+BUILD_WITH_GAPPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_BUILD_APERTURE_CAMERA := false
+CHERISH_BUILD_TYPE := UnOfficial
+
+CHERISH_MAINTAINER := Anirban_X
+CHERISH_CHIPSET := Snapdragon 675
+CHERISH_BATTERY := 4000mAh
+CHERISH_DISPLAY := 2340 x 1080
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -41,7 +49,7 @@ $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 EXTRA_UDFPS_ICONS := false
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := infinity_violet
+PRODUCT_NAME := cherish_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
