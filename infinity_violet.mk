@@ -9,6 +9,7 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common infinityFest AOSP stuff.
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
@@ -18,11 +19,11 @@ TARGET_SUPPORTS_CALL_RECORDING := true
 # Infinity-X Flags
 INFINITY_BUILD_TYPE := UnOfficial
 INFINITY_MAINTAINER := Anirban
-TARGET_SUPPORTS_BLUR := false
-TARGET_HAS_UDFPS := false
+TARGET_SUPPORTS_BLUR := true
+# TARGET_HAS_UDFPS := false
 WITH_GAPPS := true
 WITH_GMS := true
-TARGET_ENABLE_BLUR := false
+TARGET_ENABLE_BLUR := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
